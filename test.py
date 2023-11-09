@@ -13,10 +13,8 @@ def ask_mcq(**kwargs):
     
     while True:
         user_input = input("Enter your choice")
-        if user_input in [n+1 in answer]
-        return user_input
+        if user_input in [n+1 for n in answer]:
+            return user_input
 
-        
-
-
-ask_question(question = ["qn1", "qn2"], answer = ["ans1", "ans2"])
+    
+ask_mcq(dialogue = ["qn1", "qn2"], question = ["ans1", "ans2"])
