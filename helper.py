@@ -1,4 +1,5 @@
 import time
+import os
 
 DELAY = 1.5
 KEY_WORD = "any"
@@ -20,8 +21,12 @@ def check_valid(lst_valid_ans):
     valid = False
     while not valid:
         response = input("What do you do?\n")
-        if (KEY_WORD in lst_valid_ans): return response
-        elif (response in lst_valid_ans): return response
+        if (KEY_WORD in lst_valid_ans): 
+            os.system("clear")
+            return response
+        elif (response in lst_valid_ans): 
+            os.system("clear")
+            return response
         else:
             print("Invalid Response")
         

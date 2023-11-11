@@ -1,13 +1,5 @@
 from helper import interact_handler
-
-class Rat:
-    def __init__(self):
-        self.health = 100
-        self.filth = 50
-        self.size = 1
-        self.hunger = 70
-        self.rat_gang = []
-        self.belongings = {}
+from Ratata import Rat
 
 rat = Rat()
 
@@ -23,6 +15,7 @@ def meet_hobo(rat: Rat):
     answer = ["1", "2"]
 
     user_input = interact_handler(dialogue, options, answer)
+
     match user_input:
         case "1":
             rat.belongings["Cheese"] = rat.belongings.get("Cheese", 0) + 1
@@ -63,7 +56,6 @@ def cat_attack(rat: Rat):
                                 "You took 40 damage from the encounter"]
                     interact_handler(dialogue)
 
-                    # Maybe can add some interesting mechanics and make it so that the rat gang members' names would be displayed?
 
             case "2":
                 if len(rat.rat_gang) > 0:
